@@ -187,3 +187,11 @@
   width: 24px;package.json
   height: 24px;
 }
+
+[aria-expanded="true"] .vert {
+  display: none;
+}
+
+[aria-expanded] rect {
+  fill: currentColor;
+}

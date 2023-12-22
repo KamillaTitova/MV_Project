@@ -39,4 +39,4 @@ def get_query(id):
     return f"query {id}; вернуться в листинг. <a href=\"/query\">тыц</a>"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5001, debug=True)

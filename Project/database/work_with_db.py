@@ -1,24 +1,23 @@
-# from sqlalchemy import *
-# from sqlalchemy.ext.declarative import declarative_base
-# from sqlalchemy.orm import sessionmaker, declarative_base
-# from database.models import DB_Scripts
-from sqlalchemy import create_engine, Table, MetaData
-from sqlalchemy.sql import select, and_
-from sqlalchemy.orm import registry
+from flask import Flask, render_template, request, redirect, url_for
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from alchemy_decl import Base, Main
+import psycopg2
 
 
 # Создание базового класса моделе и создание подключения к базе данных SQLite
-engine = create_engine('sqlite:///Users/kamillatitova/Library/DBeaverData/workspace6/General/Scripts/scripts.db', echo=True)
-meta = MetaData(engine)
+engine = create_engine(f'postgresql+psycopg2://localhost/CryptoScriptDB', echo=True)
+session = sessionmaker(bind=engine)
 
-db_table = Table('scripts', meta, autoload=True)
+s = session()
 
-conn = engine.connect()
-s = select([db_table]).where(db_table.c.authors == '164098')
-result = conn.execute(s)
+for script_code, script_id in s.query(Main.script_code, Main.script_id).filter(Main.script_id == 1):
+   print(script_code)
 
-for row in result.fetchall():
-   print(row)
+# def showScript():
+#    for Script_code, Script_ID in s.query(Main.Script_code, Main.Script_ID).filter(Main.Script_ID == 1):
+#       print(Script_code)
+#    return render_template('main.html', Script_code=Script_code)
 # with engine.connect() as connection:
 #     result = connection.execute(text('SELECT * FROM users'))
 #

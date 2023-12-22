@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="english">
+<html lang="ru">
   <head>
     <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -88,7 +88,6 @@
   <body>
     <link rel="stylesheet" href="static/style.css" />
     <div>
-      <link href="./onclick.js">
       <link href="./index.css" rel="stylesheet" />
 
       <div class="frame1-container">
@@ -135,35 +134,52 @@
                 class="frame1-searchbutton1"
               />
             </div>
-            <div aria-expanded="false" class="frame1-folder11">
-              <span class="frame1-text6"><span>Папка №1</span></span>
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
-                  <rect class="vert" height="8" width="2" y="1" x="4"/>
-                  <rect height="2" width="8" y="4" x="1"/>
-                </svg>
-            </div>
-            <div hidden class="frame1-folder12">
-                <span class="frame1-text7"><span>Скрипт №1</span></span>
-            </div>
-            <div hidden class="frame1-folder12">
-                <span class="frame1-text7"><span>Скрипт №2</span></span>
-            </div>
-            <div aria-expanded="false" class="frame1-folder11">
-              <span class="frame1-text6"><span>Папка №2</span></span>
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
-                  <rect class="vert" height="8" width="2" y="1" x="4"/>
-                  <rect height="2" width="8" y="4" x="1"/>
-                </svg>
-            </div>
-            <div hidden class="frame1-folder12">
-                <span class="frame1-text7"><span>Скрипт №3</span></span>
-            </div>
-            <div hidden class="frame1-folder12">
-                <span class="frame1-text7"><span>Скрипт №4</span></span>
-            </div>
+              <h2>
+                <button aria-expanded="false">
+                  Папка №1
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+                    <rect class="vert" height="8" width="2" y="1" x="4"/>
+                    <rect height="2" width="8" y="4" x="1"/>
+                  </svg>
+                </button>
+              </h2>
+                  <div hidden>
+                    <h2>
+                      <button>
+                        <p style="font-size: 17px">Скрипт №1</p>
+                      </button>
+                    </h2>
+                    <h2>
+                      <button>
+                        <p style="font-size: 17px">Скрипт №2</p>
+                      </button>
+                    </h2>
+                  </div>
+              <h2>
+                <button aria-expanded="false">
+                  Папка №2
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+                    <rect class="vert" height="8" width="2" y="1" x="4"/>
+                    <rect height="2" width="8" y="4" x="1"/>
+                  </svg>
+                </button>
+              </h2>
+                  <div hidden>
+                    <h2>
+                      <button>
+                        <p style="font-size: 17px">Скрипт №3</p>
+                      </button>
+                    </h2>
+                    <h2>
+                      <button>
+                        <p style="font-size: 17px">Скрипт №4</p>
+                      </button>
+                    </h2>
+                  </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+    <script src="static/onclick.js"></script>
 </html>

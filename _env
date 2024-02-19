@@ -1,0 +1,6 @@
+SECRET_KEY=fdkjshfhjsdfdskfdsfdcbsjdkfdsdf
+DEBUG=True
+APP_SETTINGS=config.DevelopmentConfig
+DATABASE_URL=sqlite:///mvm_sql_scripts.sqlite3
+FLASK_APP=src
+FLASK_DEBUG=1
